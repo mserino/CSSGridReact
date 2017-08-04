@@ -14,4 +14,4 @@ The skeleton of the project has been built using `create-react-app` ([Github pag
 - Webpack
 
 ### Demo
-Demo page available here: xxx
+Demo page available here: [https://calm-temple-95741.herokuapp.com/](https://calm-temple-95741.herokuapp.com/)
