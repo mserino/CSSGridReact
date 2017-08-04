@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
+import logoUrl from '../../images/telescope.png';
 
 class Header extends Component {
   render() {
@@ -7,6 +8,7 @@ class Header extends Component {
       <header className="header span-col-12 grid grid-col-12">
         <div className="container-col-3 grid grid-col-12">
           <div className="header-logo span-col-2">
+            <img src={logoUrl} alt="Logo"/>
           </div>
           <ul className="header-links span-col-10">
             <li className="header-link-item">Home</li>

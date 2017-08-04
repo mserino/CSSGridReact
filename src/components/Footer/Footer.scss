@@ -1,0 +1,102 @@
+@import '../../styles/globals/globals';
+
+.footer {
+  background-color: $color-main-grey;
+  color: $color-main-lightgrey;
+  padding: 30px 0;
+  text-align: center;
+
+  &-logo {
+    -webkit-margin-after: 1.33em;
+  }
+
+  &-title {
+    text-transform: uppercase;
+    margin-top: 0;
+    cursor: pointer;
+
+    &.expandable {
+      &:after {
+        content: '+';
+        margin-left: 10px;
+        font-size: 20px;
+      }
+    }
+
+    &.expandable.open {
+      &:after {
+        content: '-';
+      }
+    }
+  }
+
+  &-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+
+    &.open {
+      max-height: 100px;
+      padding-bottom: 1.33em;
+    }
+  }
+
+  &-links, &-links.open {
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  &-link-item {
+    margin-bottom: 3px;
+  }
+
+  &-input {
+    -webkit-appearance: none;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    padding: 10px 5px;
+  }
+
+  &-input-button {
+    background-color: $color-main-blue;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($color-main-blue, 5%);
+    }
+  }
+}
+
+@media only screen and (min-width : $sm) {
+  .footer {
+    text-align: left;
+
+    &-links {
+      display: block;
+      overflow-y: visible;
+    }
+
+    &-title {
+      pointer-events: none;
+      cursor: text;
+
+      &.expandable {
+        &:after {
+          content: '';
+        }
+      }
+    }
+
+    &-logo {
+      -webkit-margin-after: 0;
+    }
+  }
+}
