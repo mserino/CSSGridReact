@@ -1,8 +1,8 @@
 import React from 'react';
-import './Footer.css';
+import './style.css';
 import logoUrl from '../../images/telescope.png';
 
-import FooterLink from './FooterLink/FooterLink';
+import FooterLink from './FooterLink';
 
 const Footer = () => {
   return (

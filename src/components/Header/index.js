@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Header.css';
+import './style.css';
 import logoUrl from '../../images/telescope.png';
 
 class Header extends Component {
